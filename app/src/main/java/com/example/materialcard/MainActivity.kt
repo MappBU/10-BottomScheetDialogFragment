@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        // Тап по кнопке Play через интерфейс
         binding?.Button?.setOnClickListener(this)
 
     }
@@ -24,12 +25,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         val parameters = Bundle()
 
+        // Передаю во фрагмент Техт вью из Маин активити разметки
         parameters.putString("tittleMovie", binding?.titleMovie?.text?.toString())
         parameters.putString("longMovie", binding?.longMovie?.text?.toString())
         parameters.putString("actorsMovie", binding?.actorsMovie?.text?.toString())
 
         details.arguments = parameters
 
+        // Показывает Bottom Scheet Dialog Fragment
         details.show(supportFragmentManager, "details")
 
     }
