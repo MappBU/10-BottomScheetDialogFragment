@@ -6,7 +6,7 @@ import android.view.View
 import androidx.databinding.DataBindingUtil
 import com.example.materialcard.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var binding:ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +14,23 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
+        binding?.Button?.setOnClickListener(this)
 
-        binding?.card?.setOnLongClickListener {
-            binding?.card?.isChecked = !binding?.card?.isChecked!!
-            true
-        }
+    }
+
+    override fun onClick(view: View?) {
+
+        val details = Details()
+
+        val parameters = Bundle()
+
+        parameters.putString("tittleMovie", binding?.titleMovie?.text?.toString())
+        parameters.putString("longMovie", binding?.longMovie?.text?.toString())
+        parameters.putString("actorsMovie", binding?.actorsMovie?.text?.toString())
+
+        details.arguments = parameters
+
+        details.show(supportFragmentManager, "details")
 
     }
 

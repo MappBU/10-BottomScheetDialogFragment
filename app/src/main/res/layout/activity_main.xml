@@ -30,21 +30,23 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/bad_boys_pic">
 
                 <Button
-                    android:id="@+id/containedIconButton"
+                    android:id="@+id/Button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_marginEnd="10dp"
                     android:backgroundTint="@android:color/holo_orange_dark"
                     android:textColor="@color/black"
                     android:text="@string/play"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/titleMovie"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
@@ -53,6 +55,32 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginStart="5dp"
                     android:text="@string/badBoys"
+                    android:background="@color/black"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/longMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:text="@string/longMovie"
+                    android:background="@color/black"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/actorsMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:padding="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/actors"
                     android:background="@color/black"
                     android:textColor="@color/white"/>
 

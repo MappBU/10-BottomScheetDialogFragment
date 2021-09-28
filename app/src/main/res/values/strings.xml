@@ -2,6 +2,7 @@
     <string name="app_name">Material Card</string>
     <string name="play">PLAY</string>
     <string name="badBoys">BAD BOYS</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="actors">Will SMITH AND MARTIN</string>
+    <string name="longMovie">120 min</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
