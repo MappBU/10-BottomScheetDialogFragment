@@ -1,6 +1,6 @@
 # Bottom-Scheet-Dialog-Fragment
 
-# Здесь создаем новый фрагмент Details
+Здесь создаем новый фрагмент Details
 
 Как выглядит:
 
